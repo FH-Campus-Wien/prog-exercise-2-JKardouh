@@ -40,8 +40,7 @@ public class App {
                 System.out.print(numbs+ " ");
                 numbs++;
             }
-
-            System.out.println("");
+            System.out.println();
         }
     }
 
@@ -56,7 +55,7 @@ public class App {
                 if(j==0) System.out.print("*");
                 else System.out.print("**");
             }
-            if (i < 6) System.out.println();
+            System.out.println();
         }
     }
 
@@ -75,15 +74,15 @@ public class App {
         int i,j,k;
          for ( i = 0; i < (height/ 2) +1; i++){ //the bigger triangle
 
-           for( j = 0; j < (height-1) / 2-i; j++){
+           for(j = 0; j < (height-1) / 2-i; j++){
                System.out.print(" ");
            }
-           for ( j= i; j > 0; j--) {
+           for (j= i; j > 0; j--) {
                System.out.print((char)(character - j));
            }
            System.out.print(character);
 
-           for ( k= 1; k <= i ; k++) {
+           for (k= 1; k <= i ; k++) {
                System.out.print((char)(character - k));
            }
            System.out.println();
@@ -92,15 +91,15 @@ public class App {
          //second part, smaller triangle
          for( i= (height/2) -1; i >= 0; i--){
 
-             for( j = 0; j < (height-1) / 2-i ; j++){
+             for(j = 0; j < (height-1) / 2-i ; j++){
                  System.out.print(" ");
              }
-             for ( j= i; j > 0 ; j--) {
+             for (j= i; j > 0 ; j--) {
                  System.out.print((char)(character - j));
              }
              System.out.print(character);
 
-             for ( k= 1; k <= i; k++) {
+             for (k= 1; k <= i; k++) {
                  System.out.print((char)(character - k));
              }
              System.out.println();
@@ -143,7 +142,7 @@ public class App {
         int number = scanner.nextInt();
         boolean ResultFound = false;
 
-        while (ResultFound == false){
+        while (!ResultFound){
             int ones = number %10;
             int tens = ((number % 100) - ones) / 10;
             int hundreds = (number - (tens + ones))/100;
@@ -153,11 +152,11 @@ public class App {
 
             if (nSquaredSums == 1) {
                 System.out.println("Happy number!");
-                ResultFound = !ResultFound;
+                ResultFound = true;
             }
             if (nSquaredSums == 4){
                 System.out.println("Sad number!");
-                ResultFound = !ResultFound;
+                ResultFound = true;
             }
         }
     }
